@@ -22,4 +22,4 @@ WORKDIR /bin/
 
 COPY --from=builder /src/cmd/gost/gost .
 
-ENTRYPOINT ["/bin/gost"]
+ENTRYPOINT ["/bin/gost", "-L=$L", "-F=$F"]
